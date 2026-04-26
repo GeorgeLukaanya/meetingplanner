@@ -1,0 +1,20 @@
+# Maven build output
+target/
+
+# IDE project files
+.idea/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+.factorypath
+*.launch
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
