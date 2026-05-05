@@ -13,6 +13,30 @@ java -version
 mvn -version
 ```
 
+## Running the Application
+
+Navigate to the Maven project directory, build the JAR, and run it:
+
+```bash
+cd meetingplanner/meetingplanner
+mvn package -DskipTests
+java -cp target/meetingplanner-1.0-SNAPSHOT.jar edu.sc.bse3211.meetingplanner.PlannerInterface
+```
+
+The application launches an interactive text menu with the following options:
+
+```
+1. Schedule a meeting
+2. Request vacation time
+3. Check room availability
+4. Check person availability
+5. Print agenda for a room
+6. Check agenda for a person
+0. Exit
+```
+
+Follow the prompts to enter months (1–12), days (1–31), and hours (0–23). Type `cancel` at room/person selection prompts to return to the main menu, and `done` when finished adding attendees.
+
 ## Running the Tests
 
 Navigate to the Maven project directory and run the tests:
@@ -50,6 +74,14 @@ mvn test -Dtest=CalendarTest#testMethodName
 
 ```bash
 mvn clean test
+```
+
+### Clean all build outputs
+
+To remove the `target/` directory and all compiled classes, JARs, and test reports:
+
+```bash
+mvn clean
 ```
 
 ## Project Structure
